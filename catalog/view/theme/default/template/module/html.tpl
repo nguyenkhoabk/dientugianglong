@@ -1,6 +1,8 @@
-<div>
+<div class="html-module">
   <?php if($heading_title) { ?>
-    <h2><?php echo $heading_title; ?></h2>
+    <h3 class="cat-heading"><?php echo $heading_title; ?></h3>
   <?php } ?>
-  <?php echo $html; ?>
+  <div class="content-html-module">
+	<?php echo $html; ?>
+  </div>
 </div>

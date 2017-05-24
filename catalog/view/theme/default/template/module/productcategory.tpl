@@ -1,6 +1,6 @@
 <?php foreach ($categories as $category) { ?>
-<div class="panel-heading">
-	<h4 class="panel-title"><?php echo $category['name']; ?></h4><span class="pull-right"><a href="<?php echo $category['href']; ?>">View All</a></span>
+<div>
+	<a href="<?php echo $category['href']; ?>"><h3 class="heading"><?php echo $category['name']; ?></h3></a>
 </div>
 <div class="row">
   <?php foreach ($category['products'] as $product) { ?>
@@ -9,7 +9,7 @@
       <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
       <div class="caption">
         <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
-        <p><?php echo $product['description']; ?></p>
+       
         <?php if ($product['rating']) { ?>
         <div class="rating">
           <?php for ($i = 1; $i <= 5; $i++) { ?>
